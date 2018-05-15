@@ -1,0 +1,86 @@
+@import "base/ui-variables";
+
+@gray-base: #fff;
+@gray-darker: darken(@gray-base, 13.5%);
+@gray-dark: darken(@gray-base, 20%);
+@gray: darken(@gray-base, 33.5%);
+@gray-light: darken(@gray-base, 46.7%);
+@gray-lighter: darken(@gray-base, 92.5%);
+@white: #303030;
+
+@accent-primary: #ff849c;
+@accent-primary-dark: darken(@accent-primary, 5%);
+
+@background-primary: #303030;
+@background-off-primary: #303030;
+@background-secondary: #181818;
+@background-tertiary: #181818;
+
+@border-color-primary: darken(@background-primary, 10%);
+@border-color-secondary: darken(@background-secondary, 10%);
+@border-color-tertiary: darken(@background-tertiary, 10%);
+@border-color-divider: @border-color-secondary;
+
+@text-color: #eee;
+@text-color-subtle: fadeout(@text-color, 20%);
+@text-color-very-subtle: fadeout(@text-color, 40%);
+@text-color-inverse: white;
+@text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
+@text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
+@text-color-heading: #fff;
+@text-color-link: @accent-primary;
+@text-color-link-hover: @accent-primary-dark;
+@text-color-link-active: @accent-primary-dark;
+
+@btn-default-bg-color: lighten(@background-primary, 5%);
+@dropdown-default-bg-color: @background-tertiary;
+
+@input-bg: #303030;
+@input-border: @input-bg;
+
+@list-bg: #303030;
+@list-border: @border-color-divider;
+@list-selected-color: @text-color-inverse;
+@list-focused-color: @text-color;
+
+@toolbar-background-color: #212121;
+@panel-background-color: #212121;
+
+.sheet-toolbar {
+    border-bottom: 1px solid @border-color-divider;
+    box-shadow: none;
+}
+
+.thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
+    -webkit-filter: invert(100%);
+}
+
+img.content-dark {
+    -webkit-filter: invert(100%);
+}
+
+img.content-light {
+    -webkit-filter: invert(100%);
+}
+
+.mail-label {
+    -webkit-filter: contrast(110%) brightness(85%);
+}
+
+#message-list .message-item-wrap .message-item-white-wrap {
+    box-shadow: 0 0 0.5px #181818, 0 1px 1.5px #181818;
+}
+
+.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
+    color: #aaa;
+}
+
+.nylas-search-bar .menu .header-container input {
+    border: 1px solid @background-tertiary;
+    box-shadow: none;
+}
+
+.thread-list .thread-icon.thread-icon-unread,
+.draft-list .thread-icon.thread-icon-unread {
+    background-image: url(https://jeannedarc.xyz/extra/css/mailspring/images/icon.png);
+}
